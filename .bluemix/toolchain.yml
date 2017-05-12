@@ -9,7 +9,7 @@ toolchain:
   name: icon2-initial-setup-toolchain-{{timestamp}}
 services:
   icon-r2-init-setup-repo:
-    service_id: github_integrated
+    service_id: github
     parameters:
       repo_url: 'https://github.ehealthontario.ca-east.bluemix.net/ICON-TEST/icon-r2-init-setup'
       type: link
