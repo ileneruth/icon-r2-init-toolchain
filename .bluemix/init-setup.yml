@@ -108,7 +108,6 @@ stages:
     dir_name: null
   triggers:
   - type: stage
-    enabled: false
   jobs:
   - name: Deploy
     type: deployer
