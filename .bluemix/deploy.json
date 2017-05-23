@@ -8,46 +8,6 @@
     "longDescription": "This delivery pipeline automates the initial provisioning of services required for ICON R2.",
     "type": "object",
     "properties": {
-        "clamav-endpoint": {
-          "description": "CLAMAV endpoint",
-          "type": "string"
-        },
-        "crypto-password": {
-          "description": "description",
-          "type": "string"
-        },
-        "jwt-secret": {
-          "description": "description",
-          "type": "string"
-        },
-        "endpoint_dictionary": {
-          "description": "description",
-          "type": "string"
-        },
-        "endpoint_retrieval": {
-          "description": "description",
-          "type": "string"
-        },
-        "endpoint_retrieval_token": {
-          "description": "description",
-          "type": "string"
-        },
-        "endpoint_submission": {
-          "description": "description",
-          "type": "string"
-        },
-        "endpoint_submission_token": {
-          "description": "description",
-          "type": "string"
-        },
-        "postgres_readonly_role": {
-          "description": "description",
-          "type": "string"
-        },
-        "tz": {
-          "description": "Timezone",
-          "type": "string"
-        },
         "prod-region": {
             "description": "The bluemix region",
             "type": "string"
@@ -62,16 +22,6 @@
         }
     },
     "required": [
-        "clamav-endpoint",
-        "crypto-password",
-        "jwt-secret",
-        "endpoint_dictionary",
-        "endpoint_retrieval",
-        "endpoint_retrieval_token",
-        "endpoint_submission",
-        "endpoint_submission_token",
-        "postgres_readonly_role",
-        "tz",
         "prod-region",
         "prod-organization",
         "prod-space"
@@ -82,90 +32,6 @@
             "url": "/devops/setup/bm-helper/helper.html"
         },
         {
-            "type": "text",
-            "readonly": false,
-            "title": "CLAMAV Endpoint",
-            "key": "clamav-endpoint"
-        },
-        {
-            "type": "text",
-            "readonly": false,
-            "title": "Crypto Password",
-            "key": "crypto-password"
-        },
-        {
-            "type": "text",
-            "readonly": false,
-            "title": "JWT Secret",
-            "key": "jwt-secret"
-        },
-        {
-            "type": "text",
-            "readonly": false,
-            "title": "Postgres read only role",
-            "key": "postgres_readonly_role"
-        },
-        {
-            "type": "text",
-            "readonly": false,
-            "title": "Timezone",
-            "key": "tz"
-        },
-        {
-            "type": "table",
-            "columnCount": 2,
-            "widths": [
-                "50%",
-                "50%"
-            ],
-            "items": [
-              {
-                 "type": "label",
-                 "title": "PHIX Endpoint Retrieval"
-              },
-              {
-                 "type": "label",
-                 "title": "PHIX Endpoint Retrieval Token"
-              },
-              {
-                 "type": "text",
-                 "key": "endpoint_retrieval"
-              },
-              {
-                 "type": "text",
-                 "key": "endpoint_retrieval_token"
-              },
-              {
-                 "type": "label",
-                 "title": "PHIX Endpoint Submission"
-              },
-              {
-                 "type": "label",
-                 "title": "PHIX Submission Token"
-              },
-              {
-                  "type": "text",
-                  "key": "endpoint_submission"
-              },
-              {
-                 "type": "text",
-                 "key": "endpoint_submission_token"
-              },
-              {
-                 "type": "label",
-                 "title": "PHIX Dictionary"
-              },
-              {
-                 "type": "label",
-                 "title": ""
-              },
-              {
-                 "type": "text",
-                 "key": "endpoint_dictionary"
-              }
-            ]
-          },
-          {
             "type": "table",
             "columnCount": 3,
             "widths": [

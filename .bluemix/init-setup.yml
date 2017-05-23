@@ -9,37 +9,6 @@ stages:
   triggers:
   - type: stage
     enabled: false
-  properties:
-  - name: CLAMAV_ENDPOINT
-    type: text
-    value: ${CLAMAV_ENDPOINT}
-  - name: CRYPTO_PASSWORD
-    type: secure
-    value: ${CRYPTO_PASSWORD}
-  - name: JWT_TOKEN_SECRET_KEY
-    type: secure
-    value: ${JWT_TOKEN_SECRET_KEY}
-  - name: PHIX_ENDPOINT_DICTIONARY
-    type: text
-    value: ${PHIX_ENDPOINT_DICTIONARY}
-  - name: PHIX_ENDPOINT_RETRIEVAL
-    type: text
-    value: ${PHIX_ENDPOINT_RETRIEVAL}
-  - name: PHIX_ENDPOINT_RETRIEVAL_TOKEN
-    type: secure
-    value: ${PHIX_ENDPOINT_RETRIEVAL_TOKEN}
-  - name: PHIX_ENDPOINT_SUBMISSION
-    type: text
-    value: ${PHIX_ENDPOINT_SUBMISSION}
-  - name: PHIX_ENDPOINT_SUBMISSION_TOKEN
-    type: secure
-    value: ${PHIX_ENDPOINT_SUBMISSION_TOKEN}
-  - name: POSTGRES_READONLY_ROLE
-    type: text
-    value: ${POSTGRES_READONLY_ROLE}
-  - name: TZ
-    type: text
-    value: ${TZ}
   jobs:
   - name: Create Elastic search service
     type: deployer
@@ -86,20 +55,6 @@ stages:
       npm i child_process
 
       node scripts/one-time-setup.js compose-rabbitmq-dedicated icon-rabbitmq Credential1
-  - name: Create user provided service
-    type: deployer
-    fail_stage: false
-    target:
-      region_id: ${PROD_REGION_ID}
-      organization: ${PROD_ORG_NAME}
-      space: ${PROD_SPACE_NAME}
-      application: ${CF_APP_NAME1}
-    script: |
-      #!/bin/sh
-
-      export PATH=/opt/IBM/node-v6.7.0/bin:$PATH
-      
-      ./scripts/create_user_provided_service.sh
 - name: Deploy PSQL
   inputs:
   - service: ${SAMPLE_REPO}
