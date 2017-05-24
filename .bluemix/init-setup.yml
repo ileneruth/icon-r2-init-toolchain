@@ -59,7 +59,7 @@ stages:
   inputs:
   - service: ${SAMPLE_REPO}
     type: git
-    branch: ibm-devops
+    branch: QA
     dir_name: null
   triggers:
   - type: stage
