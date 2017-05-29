@@ -3,15 +3,15 @@ template:
   name: ICON R2 Initial Setup Toolchain Template
   description: This Toolchain is for the initial setup, including provisioning of Postgres, RabbitMQ and ElasticSearch.
   info:
-    git url: '[https://github.com/Shifeng-ON/icon-r2-init-toolchain](https://github.com/Shifeng-ON/icon-r2-init-toolchain)'
-    git branch: '[master](https://github.com/Shifeng-ON/icon-r2-init-toolchain/tree/master)'
+    git url: '[https://github.com/ileneruth/icon-r2-init-toolchain](https://github.com/ileneruth/icon-r2-init-toolchain)'
+    git branch: '[master](https://github.com/ileneruth/icon-r2-init-toolchain/tree/master)'
 toolchain:
   name: icon2-initial-setup-toolchain-{{timestamp}}
 services:
   icon-r2-init-setup-repo:
-    service_id: github
+    service_id: githubpublic
     parameters:
-      repo_url: 'https://github.ehealthontario.ca-east.bluemix.net/ICON-TEST/icon-r2-init-setup'
+      repo_url: 'https://github.com/MOHLTC11/icon-r2-init-setup'
       type: link
       has_issues: false
       enable_traceability: false
